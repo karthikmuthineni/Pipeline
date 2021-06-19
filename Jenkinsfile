@@ -27,3 +27,19 @@ pipeline {
         }
     }
 }
+
+post {
+ 
+ success {
+  
+  echo 'successful pipeline'
+
+ }
+
+ failure {
+
+  echo 'failed pipeline'
+
+ }
+
+}
