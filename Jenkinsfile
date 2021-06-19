@@ -28,19 +28,19 @@ pipeline {
     }
 
 
-post {
+    post {
  
- success {
+      success {
   
-  echo 'successful pipeline'
+        echo 'successful pipeline'
 
- }
+      }
 
- failure {
+      failure {
 
-  echo 'failed pipeline'
+        echo 'failed pipeline'
 
- }
+      }
 
-}
+   }
 }
