@@ -1,0 +1,22 @@
+---
+- name: Ansible Playbook1
+  hosts: webservers
+  remote_user: root
+  become: true
+  gather_facts: true
+  tasks:
+   - name: Install http
+     yum:
+       name: Apache
+       state: present
+       
+- name: Ansible Playbook2
+  hosts: database servers
+  remote_user: root
+  become: true
+  gather_facts: true
+  tasks:
+    - name: Install Mysql
+      apt:
+         name: mysql
+         state: present
