@@ -1,0 +1,13 @@
+groups:
+ - name: custom rules
+   rules:
+    - record: max_memory
+      expr: 100 - (100*max_memory)
+      
+ - name: alerts
+   rules:
+    - alert: InstanceDown
+      expr: up == 0
+      for: 1m
+      labels:
+       severity: critical
