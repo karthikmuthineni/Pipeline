@@ -1,0 +1,14 @@
+version: '3'
+services:
+ mongo:
+  image: mongo
+  ports:
+   - 8080:8080
+  environment:
+   - username = admin
+   - password = password
+  volumes:
+   - data: /var/lib/mongo/data
+volumes:
+ data:
+  driver: local
